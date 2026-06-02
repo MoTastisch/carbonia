@@ -1,9 +1,9 @@
 // ---- Config ----
 async function loadConfigs() {
   const [p, d, l] = await Promise.all([
-    fetch('data/projects.json').then(r => r.json()),
-    fetch('data/downloads.json').then(r => r.json()),
-    fetch('data/links.json').then(r => r.json()),
+    fetch('/data/projects.json').then(r => { if (!r.ok) throw new Error(`projects ${r.status}`); return r.json(); }),
+    fetch('/data/downloads.json').then(r => { if (!r.ok) throw new Error(`downloads ${r.status}`); return r.json(); }),
+    fetch('/data/links.json').then(r => { if (!r.ok) throw new Error(`links ${r.status}`); return r.json(); }),
   ]);
   return { projects: p, downloads: d, links: l };
 }
