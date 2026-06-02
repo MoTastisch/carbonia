@@ -1,0 +1,7 @@
+{
+  "lastUpdated": "2025-05-28",
+  "items": [
+    { "name": "ERP Portal",        "url": "https://zeisit.invoicing.co/client/",   "icon": "🧾", "label": "zeisit.invoicing.co" },
+    { "name": "Jira Board",        "url": "https://jira.example.com",         "icon": "📌", "label": "jira.example.com" }
+  ]
+}

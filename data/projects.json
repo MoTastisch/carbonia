@@ -1,0 +1,33 @@
+{
+  "lastUpdated": "2025-05-28",
+  "items": [
+    {
+      "name": "Netzwerk-Migration Q3",
+      "status": "Aktiv",
+      "statusType": "green",
+      "phase": "Implementierung",
+      "updated": "28. Mai 2025"
+    },
+    {
+      "name": "Server-Konsolidierung",
+      "status": "Review",
+      "statusType": "yellow",
+      "phase": "Dokumentation",
+      "updated": "22. Mai 2025"
+    },
+    {
+      "name": "AD-Rollout Niederlassung Nord",
+      "status": "Aktiv",
+      "statusType": "green",
+      "phase": "Planung",
+      "updated": "19. Mai 2025"
+    },
+    {
+      "name": "Backup-System Evaluation",
+      "status": "Wartend",
+      "statusType": "gray",
+      "phase": "Analyse",
+      "updated": "10. Mai 2025"
+    }
+  ]
+}

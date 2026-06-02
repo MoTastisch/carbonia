@@ -15,7 +15,6 @@ credentials/
 *.db
 *.sqlite
 *.sqlite3
-data/
 private/
 
 # Claude Code local config
