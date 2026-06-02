@@ -18,12 +18,18 @@
         <img src="./assests/img/logo.png" alt="Zeisit" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
         <span class="nav-logo" style="display:none">Zeisit<span class="logo-dot">.</span></span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#projects">Projekte</a></li>
-        <li><a href="#templates">Downloads</a></li>
-        <li><a href="#about">Über uns</a></li>
-      </ul>
-      <a href="#templates" class="btn btn-primary">Downloads</a>
+      <div id="nav-menu" class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#templates">Downloads</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#about">Über uns</a></li>
+        </ul>
+        <a href="#templates" class="btn btn-primary">Downloads</a>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -45,9 +51,9 @@
       </div>
       <div class="terminal-body">
         <div class="t-line"><span class="t-key">system</span><span class="t-sep">→</span><span class="t-val ok">online</span></div>
-        <div class="t-line"><span class="t-key">projekte</span><span class="t-sep">→</span><span class="t-val">4 aktiv</span></div>
-        <div class="t-line"><span class="t-key">downloads</span><span class="t-sep">→</span><span class="t-val">12 verfügbar</span></div>
-        <div class="t-line"><span class="t-key">letzte aktualisierung</span><span class="t-sep">→</span><span class="t-val muted">heute, 09:41</span></div>
+        <div class="t-line"><span class="t-key">projekte</span><span class="t-sep">→</span><span class="t-val" id="terminal-projects">—</span></div>
+        <div class="t-line"><span class="t-key">downloads</span><span class="t-sep">→</span><span class="t-val" id="terminal-downloads">—</span></div>
+        <div class="t-line"><span class="t-key">letzte aktualisierung</span><span class="t-sep">→</span><span class="t-val muted" id="terminal-updated">—</span></div>
       </div>
     </div>
   </section>
@@ -66,30 +72,7 @@
           <span>Phase</span>
           <span>Aktualisiert</span>
         </div>
-        <a href="#" class="table-row table-item">
-          <span class="proj-name">Netzwerk-Migration Q3</span>
-          <span><span class="badge badge-green">Aktiv</span></span>
-          <span class="proj-phase">Implementierung</span>
-          <span class="proj-date">28. Mai 2025</span>
-        </a>
-        <a href="#" class="table-row table-item">
-          <span class="proj-name">Server-Konsolidierung</span>
-          <span><span class="badge badge-yellow">Review</span></span>
-          <span class="proj-phase">Dokumentation</span>
-          <span class="proj-date">22. Mai 2025</span>
-        </a>
-        <a href="#" class="table-row table-item">
-          <span class="proj-name">AD-Rollout Niederlassung Nord</span>
-          <span><span class="badge badge-green">Aktiv</span></span>
-          <span class="proj-phase">Planung</span>
-          <span class="proj-date">19. Mai 2025</span>
-        </a>
-        <a href="#" class="table-row table-item">
-          <span class="proj-name">Backup-System Evaluation</span>
-          <span><span class="badge badge-gray">Wartend</span></span>
-          <span class="proj-phase">Analyse</span>
-          <span class="proj-date">10. Mai 2025</span>
-        </a>
+        <div id="projectTable"></div>
       </div>
     </div>
   </section>
@@ -97,12 +80,12 @@
   <!-- DIVIDER -->
   <div class="section-divider"></div>
 
-  <!-- TEMPLATES -->
+  <!-- DOWNLOADS -->
   <section class="section" id="templates">
     <div class="container">
       <div class="section-head">
         <h2>Downloads</h2>
-        <span class="count-tag">12 Dateien</span>
+        <span class="count-tag" id="downloads-count">—</span>
       </div>
 
       <div class="template-filters">
@@ -112,81 +95,21 @@
         <button class="filter-btn" data-filter="security">Security</button>
       </div>
 
-      <div class="template-grid" id="templateGrid">
+      <div class="template-grid" id="templateGrid"></div>
+    </div>
+  </section>
 
-        <div class="template-card" data-category="docs">
-          <div class="tmpl-icon">📄</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Netzwerkdokumentation</div>
-            <div class="tmpl-meta">DOCX · 42 KB</div>
-          </div>
-          <a href="assets/templates/netzwerkdoku.docx" download class="btn btn-sm">Download</a>
-        </div>
+  <!-- DIVIDER -->
+  <div class="section-divider"></div>
 
-        <div class="template-card" data-category="planning">
-          <div class="tmpl-icon">📋</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Projektplan IT-Migration</div>
-            <div class="tmpl-meta">XLSX · 28 KB</div>
-          </div>
-          <a href="assets/templates/projektplan.xlsx" download class="btn btn-sm">Download</a>
-        </div>
-
-        <div class="template-card" data-category="security">
-          <div class="tmpl-icon">🔐</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Security Checkliste</div>
-            <div class="tmpl-meta">PDF · 310 KB</div>
-          </div>
-          <a href="assets/templates/security-checklist.pdf" download class="btn btn-sm">Download</a>
-        </div>
-
-        <div class="template-card" data-category="docs">
-          <div class="tmpl-icon">📄</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Server-Inventar</div>
-            <div class="tmpl-meta">XLSX · 19 KB</div>
-          </div>
-          <a href="assets/templates/server-inventar.xlsx" download class="btn btn-sm">Download</a>
-        </div>
-
-        <div class="template-card" data-category="planning">
-          <div class="tmpl-icon">📋</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Change-Request Formular</div>
-            <div class="tmpl-meta">DOCX · 22 KB</div>
-          </div>
-          <a href="assets/templates/change-request.docx" download class="btn btn-sm">Download</a>
-        </div>
-
-        <div class="template-card" data-category="security">
-          <div class="tmpl-icon">🔐</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Risikoanalyse</div>
-            <div class="tmpl-meta">DOCX · 55 KB</div>
-          </div>
-          <a href="assets/templates/risikoanalyse.docx" download class="btn btn-sm">Download</a>
-        </div>
-
-        <div class="template-card" data-category="docs">
-          <div class="tmpl-icon">📄</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Backup-Protokoll</div>
-            <div class="tmpl-meta">XLSX · 14 KB</div>
-          </div>
-          <a href="assets/templates/backup-protokoll.xlsx" download class="btn btn-sm">Download</a>
-        </div>
-
-        <div class="template-card" data-category="planning">
-          <div class="tmpl-icon">📋</div>
-          <div class="tmpl-info">
-            <div class="tmpl-name">Rollout-Checkliste</div>
-            <div class="tmpl-meta">PDF · 180 KB</div>
-          </div>
-          <a href="assets/templates/rollout-checklist.pdf" download class="btn btn-sm">Download</a>
-        </div>
-
+  <!-- LINKS -->
+  <section class="section" id="links">
+    <div class="container">
+      <div class="section-head">
+        <h2>Links</h2>
+        <span class="count-tag" id="links-count">—</span>
       </div>
+      <div class="link-grid" id="linkGrid"></div>
     </div>
   </section>
 
@@ -197,16 +120,16 @@
       <p class="about-text">Diese Plattform dient als zentrales Hub für IT-Projekte, standardisierte Vorlagen und interne Dokumentation. Alle Ressourcen werden aktiv gepflegt und sind direkt einsatzbereit.</p>
       <div class="about-stats">
         <div class="stat-item">
-          <div class="stat-num">4</div>
+          <div class="stat-num" id="count-projects">—</div>
           <div class="stat-label">Aktive Projekte</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">12</div>
+          <div class="stat-num" id="count-downloads">—</div>
           <div class="stat-label">Downloads</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Teams</div>
+          <div class="stat-num" id="count-links">—</div>
+          <div class="stat-label">Links</div>
         </div>
       </div>
     </div>
@@ -220,7 +143,7 @@
           <img src="./assests/img/logo.png" alt="Zeisit" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
           <span class="nav-logo" style="display:none">Zeisit<span class="logo-dot">.</span></span>
         </a>
-        <span class="footer-copy">IT Projektplattform · 2025</span>
+        <span class="footer-copy">IT Projektplattform · <span id="footer-year">2025</span></span>
       </div>
     </div>
   </footer>
