@@ -1,0 +1,43 @@
+# Environment & secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.sqlite3
+data/
+private/
+
+# Claude Code local config
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+.cache/

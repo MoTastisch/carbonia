@@ -59,13 +59,24 @@ a { color: inherit; text-decoration: none; }
   gap: 40px;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  height: 28px;
+  width: auto;
+}
+
 .nav-logo {
   font-family: 'DM Mono', monospace;
   font-size: 17px;
   font-weight: 500;
   color: var(--text);
   letter-spacing: -0.02em;
-  size: 10%;
 }
 
 .logo-dot { color: var(--primary); }
