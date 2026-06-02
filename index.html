@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus IT — Projektplattform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">nexus<span class="logo-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projekte</a></li>
+        <li><a href="#templates">Templates</a></li>
+        <li><a href="#about">Über uns</a></li>
+      </ul>
+      <a href="#templates" class="btn btn-primary">Templates laden</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">IT Projektplattform</div>
+      <h1 class="hero-title">Infrastruktur,<br>die funktioniert.</h1>
+      <p class="hero-sub">Dokumentation, Templates und Projektübersichten — alles an einem Ort. Kein Overhead, kein Rauschen.</p>
+      <div class="hero-actions">
+        <a href="#templates" class="btn btn-primary">Templates herunterladen</a>
+        <a href="#projects" class="btn btn-ghost">Projekte ansehen</a>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-header">
+        <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+        <span class="terminal-title">status</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-key">system</span><span class="t-sep">→</span><span class="t-val ok">online</span></div>
+        <div class="t-line"><span class="t-key">projekte</span><span class="t-sep">→</span><span class="t-val">4 aktiv</span></div>
+        <div class="t-line"><span class="t-key">templates</span><span class="t-sep">→</span><span class="t-val">12 verfügbar</span></div>
+        <div class="t-line"><span class="t-key">letzte aktualisierung</span><span class="t-sep">→</span><span class="t-val muted">heute, 09:41</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT OVERVIEW -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <h2>Aktive Projekte</h2>
+        <a href="#" class="link-small">Alle anzeigen →</a>
+      </div>
+      <div class="project-table">
+        <div class="table-row table-head">
+          <span>Projekt</span>
+          <span>Status</span>
+          <span>Phase</span>
+          <span>Aktualisiert</span>
+        </div>
+        <a href="#" class="table-row table-item">
+          <span class="proj-name">Netzwerk-Migration Q3</span>
+          <span><span class="badge badge-green">Aktiv</span></span>
+          <span class="proj-phase">Implementierung</span>
+          <span class="proj-date">28. Mai 2025</span>
+        </a>
+        <a href="#" class="table-row table-item">
+          <span class="proj-name">Server-Konsolidierung</span>
+          <span><span class="badge badge-yellow">Review</span></span>
+          <span class="proj-phase">Dokumentation</span>
+          <span class="proj-date">22. Mai 2025</span>
+        </a>
+        <a href="#" class="table-row table-item">
+          <span class="proj-name">AD-Rollout Niederlassung Nord</span>
+          <span><span class="badge badge-green">Aktiv</span></span>
+          <span class="proj-phase">Planung</span>
+          <span class="proj-date">19. Mai 2025</span>
+        </a>
+        <a href="#" class="table-row table-item">
+          <span class="proj-name">Backup-System Evaluation</span>
+          <span><span class="badge badge-gray">Wartend</span></span>
+          <span class="proj-phase">Analyse</span>
+          <span class="proj-date">10. Mai 2025</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider"></div>
+
+  <!-- TEMPLATES -->
+  <section class="section" id="templates">
+    <div class="container">
+      <div class="section-head">
+        <h2>Template-Bibliothek</h2>
+        <span class="count-tag">12 Dateien</span>
+      </div>
+
+      <div class="template-filters">
+        <button class="filter-btn active" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="docs">Dokumentation</button>
+        <button class="filter-btn" data-filter="planning">Planung</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+      </div>
+
+      <div class="template-grid" id="templateGrid">
+
+        <div class="template-card" data-category="docs">
+          <div class="tmpl-icon">📄</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Netzwerkdokumentation</div>
+            <div class="tmpl-meta">DOCX · 42 KB</div>
+          </div>
+          <a href="assets/templates/netzwerkdoku.docx" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="planning">
+          <div class="tmpl-icon">📋</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Projektplan IT-Migration</div>
+            <div class="tmpl-meta">XLSX · 28 KB</div>
+          </div>
+          <a href="assets/templates/projektplan.xlsx" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="security">
+          <div class="tmpl-icon">🔐</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Security Checkliste</div>
+            <div class="tmpl-meta">PDF · 310 KB</div>
+          </div>
+          <a href="assets/templates/security-checklist.pdf" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="docs">
+          <div class="tmpl-icon">📄</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Server-Inventar</div>
+            <div class="tmpl-meta">XLSX · 19 KB</div>
+          </div>
+          <a href="assets/templates/server-inventar.xlsx" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="planning">
+          <div class="tmpl-icon">📋</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Change-Request Formular</div>
+            <div class="tmpl-meta">DOCX · 22 KB</div>
+          </div>
+          <a href="assets/templates/change-request.docx" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="security">
+          <div class="tmpl-icon">🔐</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Risikoanalyse</div>
+            <div class="tmpl-meta">DOCX · 55 KB</div>
+          </div>
+          <a href="assets/templates/risikoanalyse.docx" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="docs">
+          <div class="tmpl-icon">📄</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Backup-Protokoll</div>
+            <div class="tmpl-meta">XLSX · 14 KB</div>
+          </div>
+          <a href="assets/templates/backup-protokoll.xlsx" download class="btn btn-sm">Download</a>
+        </div>
+
+        <div class="template-card" data-category="planning">
+          <div class="tmpl-icon">📋</div>
+          <div class="tmpl-info">
+            <div class="tmpl-name">Rollout-Checkliste</div>
+            <div class="tmpl-meta">PDF · 180 KB</div>
+          </div>
+          <a href="assets/templates/rollout-checklist.pdf" download class="btn btn-sm">Download</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="container container-narrow">
+      <h2>Über das Projekt</h2>
+      <p class="about-text">Diese Plattform dient als zentrales Hub für IT-Projekte, standardisierte Vorlagen und interne Dokumentation. Alle Ressourcen werden aktiv gepflegt und sind direkt einsatzbereit.</p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Aktive Projekte</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">12</div>
+          <div class="stat-label">Templates</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Teams</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">nexus<span class="logo-dot">.</span></span>
+        <span class="footer-copy">IT Projektplattform · 2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
